@@ -7,6 +7,7 @@
             <tr>
                 <th>제목</th>
                 <th>내용</th>
+                <th>상세내용</th>
             </tr>
         </thead>
         <tbody>
@@ -14,6 +15,7 @@
             <tr>
                 <td>{{article.title}}</td>
                 <td>{{article.content}}</td>
+                <td><a href="{% url 'articles:detail' article.id %}" class="btn btn-primary">detail</a></td>
             </tr>
             {% endfor %}
         </tbody>
