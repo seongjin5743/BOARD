@@ -13,4 +13,6 @@
             {{article.created_at}}
         </div>
     </div>
+    <a class="btn btn-danger mt-2" href="{% url 'articles:delete' article.id %}">DELETE</a>
+    <a class="btn btn-warning mt-2" href="{% url 'articles:edit' article.id %}">UPDATE</a>
 {% endblock %}
