@@ -1,18 +1,24 @@
 {% extends 'base.html' %}
 
 {% block body %}
-    <div class = 'card'>
+    <!-- Article 상세 정보를 표시하는 카드 -->
+    <div class='card'>
         <div class="card-header">
+            <!-- Article 제목 -->
             {{article.title}}
         </div>
         
         <div class="card-body">
+            <!-- Article 내용 -->
             {{article.content}}
         </div>
         <div class="card-footer">
+            <!-- Article 생성 날짜 -->
             {{article.created_at}}
         </div>
     </div>
+    <!-- Article 삭제 버튼 -->
     <a class="btn btn-danger mt-2" href="{% url 'articles:delete' article.id %}">DELETE</a>
+    <!-- Article 수정 버튼 -->
     <a class="btn btn-warning mt-2" href="{% url 'articles:edit' article.id %}">UPDATE</a>
 {% endblock %}
