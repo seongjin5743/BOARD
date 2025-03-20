@@ -39,8 +39,6 @@ def edit(request, id):
     }
     return render(request, 'edit.html', context)
 
-
-
 def update(request, id):
     title = request.POST.get('title')
     content = request.POST.get('content')
